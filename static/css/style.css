@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display);
+
+body {
+    background: #1c1515;
+}
+
+@media only screen and (max-width: 767px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+.login-box {
+    position: relative;
+    /* Ensure the container is positioned relative */
+    background-image: url('');
+    /* background-image: linear-gradient(to bottom, #2c283f, #695d83); */
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    margin: 50px auto;
+    min-height: 700px;
+    -webkit-box-shadow: 0 2px 60px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 60px -5px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: hsla(265, 53%, 29%, 1);
+
+    background: linear-gradient(90deg, hsla(265, 53%, 29%, 1) 0%, rgb(47, 39, 33) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(265, 53%, 29%, 1) 0%, rgb(79, 56, 40) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(265, 53%, 29%, 1) 0%, rgb(68, 45, 29) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#432371", endColorstr="#FAAE7B", GradientType=1);
+
+}
+
+.login-box::before {
+    content: '';
+    /* Required for pseudo-elements */
+    position: absolute;
+
+
+}
+
+
+.logo {
+    font-family: "Math Italic";
+    font-size: 45px;
+    text-align: center;
+    color: rgb(153, 248, 0);
+    /* margin-bottom: 50px; */
+}
+
+.logo .logo-font {
+    color: rgb(254, 254, 254);
+}
+
+@media only screen and (max-width: 767px) {
+    .logo {
+        font-size: 34px;
+    }
+}
+
+.header-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Lora";
+    color: rgb(255, 255, 255);
+}
+
+h5 {
+    text-align: center;
+    font-family: "Lora";
+}
+
+marquee {
+    font-family: "Lora";
+    font-size: large;
+    color: rgb(254, 254, 10);
+    font-size: 20px;
+}
+
+.login-form {
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+
+.login-form .form-control {
+    border-radius: 0;
+    margin-bottom: 30px;
+    background-color: rgb(102, 252, 241);
+    border-radius: 30px;
+    /* color: #000000; */
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+
+.login-form .form-group {
+    position: relative;
+    border-radius: 30px;
+}
+
+.login-form .form-group .forgot-password {
+    position: absolute;
+    top: 6px;
+    right: 15px;
+
+}
+
+#Weekly_Study_Hours {
+    color: #000000;
+    font-family: 'Times New Roman';
+}
+
+#gradeInput::placeholder {
+    color: #000000;
+    font-family: 'Times New Roman';
+}
+.slider-feature-card {
+    background: rgb(252, 221, 128);
+    max-width: 450px;
+    max-height: 800px;
+    margin: 40px auto;
+    padding: 15px;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 25px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 25px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.slider-feature-card img {
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.slider-description {
+    text-align: left;
+    font-family: "Math Italic";
+    font-size: 16px;
+}
+
+.slider-feature-card h3,
+.slider-feature-card p {
+    margin-bottom: 30px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+    margin-right: 15%;
+    margin-left: 30%;
+}
+
+.carousel-indicators li {
+    cursor: pointer;
+}
+
+.carousel-item {
+    /* position: relative; */
+    /* display: none;
+float: left; */
+    width: 115%;
+    margin-right: -126%;
+    /* -webkit-backface-visibility: hidden;
+backface-visibility: hidden; */
+    /* transition: transform .6s ease-in-out; */
+}
+
+.slider-title {
+    font-family: "Lora";
+}
+
+.form-group {
+    background-color: aqua;
+}

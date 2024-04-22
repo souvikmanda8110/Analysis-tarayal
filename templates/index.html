@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="	https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" />
+    <title>SIT ICOE Hackathon 2024</title>
+    <link rel="shortcut icon" href="./Images/userAsset/favicon.ico" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="/static/css/style.css" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <script src="	https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <section class="body">
+        <div class="container">
+            <div class="login-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="logo">
+                            <b><span class="logo-font">SIT ICOE Hackathon</span> 2024</b>
+                            <i><span class="logo-font">
+                                    <h3>"THE PENTAGON"</h3>
+                                </span></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <br>
+                        <h3 class="header-title">Please provide your details</h3>
+                        <form class="login-form" action='/predict' method="POST">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select id="High_School_Type" name="High_School_Type" class="form-control"
+                                            required>
+                                            <option value="Select your High School Type" align="center"><b>High
+                                                    School</b></option>
+                                            <option value="1">Govt</option>
+                                            <option value="0">Private</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select id="Sports_activity" name="Sports_activity" class="form-control"
+                                            required>
+                                            <option value="Do you love Sports Activity?" align="center">
+                                                Sports Activity</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select id="Attendance" name="Attendance" class="form-control" required>
+                                            <option value="How about your Attendance?" align="center">
+                                                Attendance</option>
+                                            <option value="1">Full</option>
+                                            <option value="0">Never</option>
+                                            <option value="2">Moderate</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select id="Reading" name="Reading" class="form-control" required>
+                                            <option value="Do you love Reading?" align="center"> Reading
+                                            </option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select id="Listening_in_Class" name="Listening_in_Class" class="form-control"
+                                            required>
+                                            <option value="Do you Listen in Class?" align="center">Attention in class
+                                            </option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select id="Project_work" name="Project_work" class="form-control" required>
+                                            <option value="Do you have Project work?" align="center">Project Work
+                                            </option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Weekly Study Duration"
+                                            id="Weekly_Study_Hours" name="Weekly_Study_Hours" required>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <select id="Sex" name="Sex" class="form-control" required>
+                                            <option value="Male/Female" align="center">Gender</option>
+                                            <option value="1">Female</option>
+                                            <option value="0">Male</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" type='submit' value='Predict '
+                                    >PREDICT</button>
+                            </div> <br>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" type='reset'
+                                    onclick="generateGrowthGraph('performance')">PERFORMANCE</button>
+                            </div>
+                            <marquee>
+                                Puja Gorai, Swapna Manna, Tuhin Pratihar, Souvik Mandal, Agnidipta Chandra
+                            </marquee>
+                        </form>
+                    </div>
+
+                    <div class="col-sm-6 hide-on-mobile">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class></li>
+                                <li data-target="#demo" data-slide-to="1" class="active"></li>
+                            </ul>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="slider-feature-card">
+                                        <h3>Prediction</h3>
+                                        <img src="{{ url_for('static', filename='img1.png') }}" alt="Image">
+                                        <center><b>
+                                                You can secure Grade:<h1 class="slider-description">
+                                                    <h1>{{grade}}</h1>
+                                                </h1>
+                                            </b></center>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="slider-feature-card">
+                                        <img src="{{ url_for('static', filename='img1.png') }}" alt="Image">
+                                        <h3 class="slider-title">Performance Analysis</h3>
+
+
+                                        <center><canvas id="growth-chart"></canvas></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a> -->
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function generateGrowthGraph() {
+        var ctx = document.getElementById('growth-chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line', // Change chart type as needed
+            data: {
+                labels: ['Attendance', 'Reading', 'Listening_in_Class', 'Weekly_Study_Hours', 'Project_work'], // Add appropriate labels
+                datasets: [{
+                    label: 'User Data',
+                    data: generateStudyHours(), // Use user-provided data
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    function generateStudyHours() {
+        var studyHours = [];
+        // Generate sample study hours data
+        for (var i = 0; i < 5; i++) {
+            studyHours.push(Math.floor(Math.random() * 10) + 1); // Random study hours between 1 and 10 for each week
+        }
+        return studyHours;
+    }
+</script>
+
+</html>
